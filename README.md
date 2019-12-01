@@ -29,18 +29,18 @@ Arguments should be separated by space
 The name of the image to be converted
 
 ### +t=
+Image threshold<br/>
 ```
 +t=120
 ```
 Value between 0 and 255<br/>
-Image threshold
 
 ### +scale=
+Image scale<br/>
 ```
 +scale=70
 ```
 Optional argument<br/>
-Image scale<br/>
 Values in percentage<br/>
 In the example above, image will be resized to 70% of its size<br/>
 
