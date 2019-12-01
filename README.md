@@ -1,6 +1,6 @@
 # Welcome to bife!
 ### Python script for image to text braille conversion
-![Logo Example](https://github.com/SupNL/bife/blob/master/images/example_logo_art.png =50x50)
+<img src="https://github.com/SupNL/bife/blob/master/images/example_logo_art.png" width="100" height="100" />
 
 ## Dependecies
 - Python 3 or above
