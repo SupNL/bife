@@ -52,10 +52,10 @@ Use a single point instead of blank space
 Useful when image is not proportional on each row
 
 Dotted art
-![Dotted](https://github.com/SupNL/bife/images/dotted.png)
+![Dotted](https://github.com/SupNL/bife/blob/master/images/dotted.png)
 
 Without dot
-![Non-Dotted](https://github.com/SupNL/bife/images/non_dotted.png)
+![Non-Dotted](https://github.com/SupNL/bife/blob/master/images/non_dotted.png)
 
 ### About me
 This is actually my first time writing a github readme for a program I've coded
