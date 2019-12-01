@@ -26,20 +26,21 @@ Arguments should be separated by space
 ```
 +file=image.png
 ```
-The name of the image to be converted
+**The name of the image to be converted**<br/>
+
 
 ### +t=
-Image threshold<br/>
 ```
 +t=120
 ```
+**Image threshold**<br/>
 Value between 0 and 255<br/>
 
 ### +scale=
-Image scale<br/>
 ```
 +scale=70
 ```
+**Image scale**<br/><br/>
 Optional argument<br/>
 Values in percentage<br/>
 In the example above, image will be resized to 70% of its size<br/>
@@ -48,8 +49,8 @@ In the example above, image will be resized to 70% of its size<br/>
 ```
 +dotted+
 ```
+**Use a single point instead of blank space**<br/><br/>
 Optional argument<br/>
-Use a single point instead of blank space<br/>
 Useful when image is not proportional on each row
 
 Dotted art<br/>
