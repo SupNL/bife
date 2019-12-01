@@ -91,32 +91,33 @@ def getBraillePattern(array):
         res += 128
     return brailleDict[res]
 
-def runThroughArray(pixelArray):
+def preparePixelArray(pixelArray):
     rowsCount = len(pixelArray)
     colsCount = len(pixelArray[0])
     fakeRow = [True] * colsCount
 
-    # must be at least divisible by 4
-    if rowsCount % 4 != 0: 
-        while rowsCount % 4 != 0:
-            pixelArray.append(fakeRow)
-            rowsCount += 1
+    # must at least be divisible by 4
+    while rowsCount % 4 != 0:
+        pixelArray.append(fakeRow)
+        rowsCount += 1
     
-    # must be a even cols
+    # cols must be even
     if colsCount % 2 != 0:
         for i in pixelArray:
             i.append(True)
         colsCount += 1
     
-    total = int((rowsCount * colsCount) / 8)
+    return int((rowsCount * colsCount) / 8), colsCount
+    
+
+def generateBrailleArt(pixelArray, totalChar, colsCount):
+    # generate braille art here
+    fileArt = open("brailleArt.txt", "w", encoding="utf8")
+
     rowSkip = 0
     colSkip = 0
 
-    # generate braille art here
-
-    fileArt = open("brailleArt.txt", "w", encoding="utf8")
-    
-    for count in range(0, total):
+    for count in range(0, totalChar):
 
         braille = getBraillePattern([
             [pixelArray[(rowSkip * 4)    ][(colSkip * 2)], pixelArray[(rowSkip * 4)    ][(colSkip * 2) + 1]],
@@ -133,9 +134,6 @@ def runThroughArray(pixelArray):
             fileArt.write("\n")
             rowSkip += 1
             colSkip  = 0
-    print("Rows:", int(rowsCount / 4))
-    print("Cols:", int(colsCount / 2))
-    print("Character count:", total)
 
     fileArt.close()
 
@@ -163,8 +161,6 @@ def findArgument(string, args):
             args.pop(i)
             return True
     return False
-
-""" MAIN """
 
 # Args without python file
 sys.argv.pop(0)
@@ -205,4 +201,11 @@ newImg = applyTreshold(threshold, img)
 
 # Create an array of pixels
 pixelArray = numpy.array(newImg).tolist()
-runThroughArray(pixelArray)
+
+# Prepare array
+totalChar, colsCount = preparePixelArray(pixelArray)
+
+# Generate txt file
+generateBrailleArt(pixelArray, totalChar, colsCount)
+
+print("Succesful!")
