@@ -33,7 +33,7 @@ Arguments should be separated by space
 ```
 +t=120
 ```
-**Image threshold**<br/>
+**Image threshold**<br/><br/>
 Value between 0 and 255<br/>
 
 ### +scale=
