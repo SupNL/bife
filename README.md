@@ -1,5 +1,5 @@
 # Welcome to bife!
-### Python script for image to text braille conversion
+### Python script for image to braille txt conversion
 <img src="https://github.com/SupNL/bife/blob/master/images/example_logo_art.png" width="350" height="350" />
 
 ## Dependecies
@@ -34,7 +34,7 @@ Arguments should be separated by space
 +t=120
 ```
 **Image threshold**<br/><br/>
-Value between 0 and 255<br/>
+Values between 0 and 255<br/>
 
 ### +scale=
 ```
